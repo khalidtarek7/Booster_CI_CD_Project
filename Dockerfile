@@ -27,9 +27,9 @@ FROM ubuntu
 RUN apt-get update
 RUN apt-get install python3-pip -y
 RUN pip3 install Django==3.0.5
-RUN python3.6 manage.py makemigrations
-RUN python3.6 manage.py migrate
-RUN python3.6 manage.py runserver 0.0.0.0:8000
+RUN python3 manage.py makemigrations
+RUN python3 manage.py migrate
+RUN python3 manage.py runserver 0.0.0.0:8000
 # USER jenkins
 # WORKDIR jenkins_home
 CMD [ "/bin/bash" ]

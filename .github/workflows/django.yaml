@@ -14,5 +14,5 @@ jobs:
     - name: Build the Django image
       run: |
           docker build . -t khalid/django
-          docker login -u khalidtarek7 -p KhalidTarek7!
+          docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
           docker push khalid/django

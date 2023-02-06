@@ -32,6 +32,5 @@ COPY . /app
 WORKDIR /app
 RUN python3 manage.py makemigrations
 RUN python3 manage.py migrate
-RUN python3 manage.py runserver
 # USER jenkins
 CMD [ "/bin/bash" ]

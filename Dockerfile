@@ -26,7 +26,7 @@ FROM ubuntu
 # RUN usermod -aG docker jenkins
 RUN apt-get update
 RUN apt-get install python3-pip -y
-RUN pip3 install -r requirements.txt
+RUN pip3 install Django==3.0.5
 RUN python3.6 manage.py makemigrations
 RUN python3.6 manage.py migrate
 RUN python3.6 manage.py runserver 0.0.0.0:8000

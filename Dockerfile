@@ -28,9 +28,10 @@ RUN apt-get update
 RUN apt-get install python3 -y
 RUN apt-get install python3-pip -y
 RUN pip3 install Django==3.0.5
+COPY . /app
 RUN python3 manage.py makemigrations
 RUN python3 manage.py migrate
 RUN python3 manage.py runserver 0.0.0.0:8000
 # USER jenkins
-# WORKDIR jenkins_home
+WORKDIR /app
 CMD [ "/bin/bash" ]

@@ -15,4 +15,4 @@ jobs:
       run: |
           docker build . -t khalid_django
           docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
-          docker push khalid_django
+          docker push khalidtarek7/khalid_django

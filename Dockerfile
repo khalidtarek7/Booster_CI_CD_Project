@@ -26,6 +26,7 @@ RUN apt-get install docker-ce -y
 RUN usermod -aG docker jenkins
 RUN apt-get update
 RUN apt-get install python3-pip -y
+RUN chmod 777 requirements.txt
 RUN pip3 install -r requirements.txt
 RUN python3.6 manage.py makemigrations
 RUN python3.6 manage.py migrate
